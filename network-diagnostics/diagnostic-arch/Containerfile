@@ -1,0 +1,3 @@
+FROM archlinux
+RUN pacman -Syu --noconfirm && pacman -S --noconfirm base-devel git fish inetutils net-tools iproute2 openbsd-netcat
+CMD fish

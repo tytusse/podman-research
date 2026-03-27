@@ -1,4 +1,0 @@
-FROM diagnostic-arch
-
-RUN pacman -S --noconfirm inetutils net-tools iproute2 openbsd-netcat
-CMD fish
