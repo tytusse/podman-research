@@ -1,7 +1,7 @@
 # What works
 ## Podman 5
 Two podman containers can talk to each other out of the box (with bridge network which is default). This however requires them to use special DNS name: `host.containers.internal`.
-In `kind`, k8s-container ("pod") can talk to outside container started via podman on host **but only via IP that  `host.containers.internal` resolves to**.
+In `kind`, k8s-container ("pod") can talk to outside container started via podman on host **but only via IP that `host.containers.internal` resolves to**.
 In other words, this quick hack will work:
 - on host: start some container, resolve `host.containers.internal` IP, write it down, stop container, remove it, it is not needed anymore.
 - inside kind container: use the IP resolved above - **it will work**
@@ -41,4 +41,5 @@ However, when installing podman 5, **the issue is the same** as on Arch (either 
 
 Files used to check the problem are [in this folder](./connectivity-issues-podman-5).
 
-
+# Good to read this probavbly
+https://github.com/containers/podman/blob/main/docs/tutorials/basic_networking.md 
