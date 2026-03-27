@@ -1,0 +1,7 @@
+FROM ubuntu
+RUN apt update && apt install -y netcat-openbsd
+
+COPY *.sh .
+RUN chmod +x *.sh
+
+CMD ./call-server.sh
