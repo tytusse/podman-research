@@ -1,0 +1,4 @@
+FROM alpine
+# see https://pkgs.alpinelinux.org/contents 
+RUN apk add iputils-ping
+ENTRYPOINT [ "ping" ]
